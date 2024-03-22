@@ -106,3 +106,13 @@ def delete_entry():
     db.commit()
     flash('Entry deleted')
     return redirect(url_for('show_entries'))
+
+
+@app.route('/edit', methods=['POST'])
+def edit_entry():
+    """Edit a selected post, identified by its id"""
+    #db = get_db()
+    #db.execute('DELETE FROM entries WHERE id=?', [request.form['id']])
+    #db.commit()
+    flash('Entry Edited')
+    return render_template('edit.html')
